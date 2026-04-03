@@ -12,8 +12,7 @@ load_dotenv()
 
 
 def has_api_key() -> bool:
-    key = os.getenv("OPENAI_API_KEY", "")
-    return bool(key) and not key.startswith("your-")
+    return False  # Set to True when OpenAI quota is available
 
 
 def ingest_documents(directory: str = None, use_samples: bool = True) -> dict:
